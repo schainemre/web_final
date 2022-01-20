@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Odev.Models.musteriler1>
+
+@{
+    ViewData["Title"] = "Listele";
+}
+
+<h1>Listele</h1>
+
+<p>
+    <a asp-action="Yeni">Yeni Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MusteriId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MusteriId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Guncelle", new {  id=item.MusteriId  }) |
+                @Html.ActionLink("Detaylar", "Detay", new {  id=item.MusteriId  }) |
+                @Html.ActionLink("Sil", "Sil", new { id=item.MusteriId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Ürünler";
+}
+<style>
+    .yazi {
+        font-size: 25px;
+        font-weight: bold;
+        padding-top:10px;
+        color:black;
+        padding-left:5px;
+    }
+    
+    
+</style>
+
+
+<div style="width:1070px;height:600px;background-color:white;">
+    <h1 style="padding-left:20px;padding-top:20px;">Ürünler</h1>
+
+    <div style="width:430px;height:400px;margin-left:30px;margin-top:30px;position:absolute;">
+        <a asp-controller="Urunler" asp-action="Sogutma">
+            <img src="~/img/8.jpg" width="430" height="287" />
+            <div class="yazi">İklimlendirme Çözümleri - Soğutma</div>
+        </a>
+    </div>
+    <div style="width:430px;height:400px;margin-left:600px;margin-top:40px;">
+        <a asp-controller="Urunler" asp-action="Isıtma">
+            <img src="~/img/9.jpg" width="430" height="287" />
+            <div class="yazi">İklimlendirme Çözümleri - Isıtma</div>
+        </a>
+    </div>
+
+
+</div>
